@@ -1,0 +1,230 @@
+.pic{
+    position: relative;
+}
+.pic .imgs{
+    position: absolute;
+    height: 500px;
+    width: 345px;
+    top:205px;
+    left: 416px;
+    z-index: 3;
+}
+.pic .iph{
+    position: absolute;
+    height: 580px;
+    width: 380px;
+    top:120px;
+    left: 300px;
+    z-index: 1;
+}
+
+body{
+    background: rgb(250, 250, 250);
+}
+@font-face{
+    font-family: "InstaFont";
+    src: url(images/billabong/Billabong.ttf) format("truetype");
+}
+h1.Insta{
+    position: relative;
+    font-family: "InstaFont" ;
+    font-size: 60px;
+    padding-left: 66px;
+}
+
+.Logging p{
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -20px;
+    color: rgb(182, 182, 182);
+}
+.Logging{
+    position: relative;
+    top: 20px;
+    left: 700px;
+    background: rgb(253, 253, 253);
+    height: 630px;
+    width: 330px;
+    border-style: solid;
+    border-width: 1px;
+    border-color:rgb(223, 219, 219);
+}
+a.btnfb{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    background: rgb(89, 100, 250);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    left: 30px;
+    top:10px;
+    padding: 10px 30px 10px 70px;
+    margin: 0px 20px -10px 20px;
+    right: 50px;
+    text-align: right;
+}
+
+#fbico{
+    position: absolute;
+    left: 40px;
+    right: 0px;
+    top: 7px;
+    bottom: 10px;
+    margin: 0px 3px 4px 4px;
+    padding: 2px 2px 2px 2px;
+    height: 15px;
+    width: 15px;
+    background: white;
+}
+.or{
+    position: relative;
+    top:30px;
+    left: 0px;
+    color: black;
+    border-bottom: 30px;
+    border-color: black;
+}
+.or .line1{
+    width: 100px;
+    left: -70px;
+    position: relative;
+}
+.or .line2{
+    width: 100px;
+    top: -25px;
+    left: 76px;
+    
+    position: relative;
+}
+#mobN{
+    position: relative;
+    height: 30px;
+    width: 250px;
+    left: 45px;
+    top:30px;
+    padding-left: 5px;
+    background:rgb(247, 245, 245);
+    border-color: rgb(247, 247, 247);
+    border-width: 0.8px;
+    border-radius: 4px;
+}
+#un{
+    position: relative;
+    height: 30px;
+    width: 250px;
+    left: 45px;
+    top:50px;
+    padding-left: 5px;
+    background:rgb(247, 245, 245);
+    border-color: rgb(247, 247, 247);
+    border-width: 0.8px;
+    border-radius: 4px;
+}
+#name{
+    position: relative;
+    height: 30px;
+    width: 250px;
+    left: 45px;
+    top:40px;
+    padding-left: 5px;
+    background:rgb(247, 245, 245);
+    border-color: rgb(247, 247, 247);
+    border-width: 0.8px;
+    border-radius: 4px;
+
+}
+#ps{
+    position: relative;
+    height: 30px;
+    width: 250px;
+    left: 45px;
+    top:60px;
+    padding-left: 5px;
+    background:rgb(247, 245, 245);
+    border-color: rgb(247, 247, 247);
+    border-width: 0.8px;
+    border-radius: 4px;
+
+}
+.sbm{
+    position: relative;
+    top:80px;
+    height: 30px;
+    width: 250px;
+    left: 50px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-radius: 4px;
+    background: rgb(89, 100, 250);
+    text-align: center;
+    cursor: pointer;
+}
+#sogl{
+    color: rgb(182, 180, 180);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    
+    padding-left: 70px;
+    padding-right: 50px;
+    font-size: 13px;
+    top:70px;
+    text-decoration: none;
+}
+#s1, #s2, #s3{
+    color:rgb(153, 152, 152);
+}
+.LogIn{
+    background: rgb(253, 253, 253);;
+    position: relative;
+    top:100px;
+    height: 40px;
+    width: 330px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(212, 210, 210);
+}
+.ln{
+    position: relative;
+    left: 80px;
+    top: -10px;
+}
+#vhod{
+    color:rgb(122, 122, 238);
+}
+#app{
+    position: relative;
+    top: 90px;
+    left: 110px;
+    text-decoration: none;
+    color:black;
+}
+#IOS{
+    position: relative;
+    top:35px;
+    left: -9px;
+    height: 45px;
+    width: 110px;
+}
+#GP{
+    position: relative;
+    top:35px;
+    left: -5px;
+    height: 45px;
+    width: 110px;
+}
+#MS{
+    position: relative;
+    top:11px;
+    left: 110px;
+    height: 50px;
+    width: 110px;
+}
