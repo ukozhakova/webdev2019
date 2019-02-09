@@ -1,13 +1,19 @@
-header{
+html { 
+ 
+}
+#header{
     position: relative;
-    background: linear-gradient(rgb(70,91,149), rgb(70,91,149));
+    background: rgb(70,91,149) no-repeat center center fixed;
     height: 150px;
+    margin-left: -10px;
+    margin-right: -14px;
     margin-top: -10px;
     border-bottom: 2px, solid rgb(19,55,131);
 }
 .TopDiv{
     position: relative;
     width: 1000px;
+    padding-left: 10px;
     margin: 0 auto;
     padding-top: 10px;
 }
@@ -16,7 +22,9 @@ header{
     margin: 40px auto;
 }
     body{
-        background: linear-gradient(white, #E5ECEC);
+        background: linear-gradient(white, #E5ECEC) no-repeat center center fixed; 
+        background-size: cover;
+        position: relative;
        
     }
     .FB-logo{
@@ -165,6 +173,7 @@ header{
         color: rgb(79, 79, 143);
         cursor: pointer;
         width: 270px;
+        
 
     }
     .tooltip .tooltiptext{
@@ -182,12 +191,10 @@ header{
         left: 50%;
         margin-left: -40px;
         cursor: text;
-        /* Fade in tooltip */
         opacity: 0;
         transition: opacity 0.3s;
         }
 
-    /* Tooltip arrow */
     .tooltip .tooltiptext::after {
         content: "";
         position: absolute;
@@ -199,23 +206,22 @@ header{
         border-color: #555 transparent transparent transparent;
         cursor: text;
         }
-
-/* Show the tooltip text when you mouse over the tooltip container */
     .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
     }
     footer{
         position: relative;
-        background: white;
         margin-top:500px;
         height: 100px;
+        background: linear-gradient(white, #E5ECEC) no-repeat center center fixed; 
        
     }
     #lang, .foot a{
         padding-left: 60px;
     }
     .foot a{
+        position: relative;
         color: rgb(60, 60, 138);
         text-decoration: none;
     }
