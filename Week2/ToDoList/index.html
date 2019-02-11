@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>To Do List</title>
+        <link rel="icon" href="images/Icon.png">
+        <link href="style.css" type="text/css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="MainPart">
+            <h1 id="today">Today</h1>
+            <span id="date"></span>
+            <h1 id="greeting"></h1>
+        </div>
+        <div id="myDIV" class="header">
+            <input type="text" id="myInput" placeholder="Task..." autofocus/>
+            <span onclick="newElement()" class="addBtn">Add Task</span>
+        </div>
+        <div>
+                <h3 id="ToDoHead">ToDo</h3>
+                <ul id="myUL">
+                    <li>Thank God</li>
+                    <li class="checked">Say Hi</li>
+                </ul>
+        </div>
+       
+        <script src="MyCode.js" ></script>
+    </body>
+</html>

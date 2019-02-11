@@ -1,0 +1,103 @@
+html { 
+    background: url(images/background.jpeg) no-repeat center center fixed; 
+    background-size: cover;
+}
+#today{
+    color: rgb(255, 255, 255);
+}
+#date{
+    position: relative;
+    color: rgb(212, 207, 207);
+    top: -42px;
+    left:90px;
+}
+#greeting{
+    position: relative;
+    top: -130px;
+    left: 300px;
+    background: center fixed;
+    text-align: left;
+    color: rgb(5, 70, 61);
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px 0px 0px 0px;
+}
+
+.addBtn{
+    position: relative;
+    left: 0px;
+    color: rgb(158, 157, 157);
+    top: -150px;
+    font-size: 30px;
+    margin:0 auto;
+    padding: 3px 10px 10px 10px;
+}
+.addBtn:hover{
+    color: rgb(38, 38, 110);
+    cursor: pointer;
+}
+#myInput:focus{
+    outline: none;
+}
+#myInput{
+    border-color:white;
+    border-style: solid;
+    border-radius: 10px;
+    background:transparent;
+    top: -150px;
+    position: relative;
+    left: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26px;
+    padding: 10px 10px 10px 10px;
+}
+#ToDoHead{
+    position: relative;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid black;
+    top: -150px;
+    width: 370px;
+}
+#myUL li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    position: relative;
+    top: -170px;
+    list-style-type: none; 
+    padding-bottom: 10px;
+    width: max-content;
+}
+#myUL li:hover{
+    cursor: pointer;
+    color: rgb(211, 33, 33);
+    
+}
+ul li.checked {
+    
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 3px 3px 0;
+    top: 0px;
+    left: -20px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 8px;
+  }
+  .close {
+    position: absolute;
+    left: 300px;
+    top: -10px;
+    padding: 12px 16px 12px 16px;
+  }   
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
