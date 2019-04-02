@@ -1,0 +1,117 @@
+.bg{
+    position: absolute;
+    width:230px;
+    height: 110px;
+    top: 390px;
+    left: 720px;
+    z-index: 3;
+    border-radius:5px;
+    
+}
+#cam{
+    width:640px;
+    height: 460px;
+    top: 200px;
+    left: 640px;
+    position: absolute;
+    z-index: 1;
+}
+#user_photo{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    height: 200px;
+
+}
+#prof_upd{
+    color: rgb(104, 101, 101);
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border-bottom: 2px solid black ;  
+    width: 160px;
+}
+#balance{
+    color: gray;
+    margin-top: -200px;
+    margin-left: 250px;
+    font-size: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+#add_card{
+    color: rgb(134, 29, 29);
+    margin-top: 90px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer; 
+   
+}
+
+#ff{
+    content: '';
+    position: absolute;
+    border-color:black;
+    border-style: solid;
+    border-width: 0px 3px 3px 0px;
+    top: 305px;
+    left: 250px;
+    transform: rotate(-39deg);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+
+  #contact_us{
+    color: rgb(134, 29, 29);
+    margin-top: -10px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer; 
+  }
+  #tt{
+    content: '';
+    position: absolute;
+    border-color:black;
+    border-style: solid;
+    border-width: 0px 3px 3px 0px;
+    top: 375px;
+    left: 250px;
+    transform: rotate(-39deg);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  #about_us{
+    color: rgb(134, 29, 29);
+    margin-top: -15px;
+    margin-left: 40px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    cursor: pointer;    
+  }
+  #rr{
+    content: '';
+    position: absolute;
+    border-color:black;
+    border-style: solid;
+    border-width: 0px 3px 3px 0px;
+    top: 438px;
+    left: 250px;
+    transform: rotate(-39deg);
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+  }
+  #replenish{
+      position: relative;
+      top:-20px;
+      left: 400px;
+      font-size: 22px;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: rgb(66, 10, 206);
+      cursor: pointer;
+  }
