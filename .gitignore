@@ -1,1 +1,7 @@
-env/
+hello/
+hello.txt/
+LICENSE.txt
+tcl/
+Scripts/
+Lib/
+Include/
