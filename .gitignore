@@ -1,5 +1,5 @@
-bin/
-include/
-lib/
-.idea/
-pip-selfcheck.json
+tcl/
+Include/
+Lib/
+Scripts/
+LICENSE.txt
