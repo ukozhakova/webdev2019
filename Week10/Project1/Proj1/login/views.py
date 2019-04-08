@@ -9,3 +9,7 @@ def signup(request):
                     '<input type = "password" name = "newPassword" class = "newPassword" placeholder = "Пароль"><br>'
                     '<button type="submit">Регистрация</button>')
 
+
+
+def welcome(request):
+    return HttpResponse('<h1>Welcome Page</h1>')
