@@ -1,0 +1,36 @@
+TaskLists
+<span style="color: blue" (click)="createTaskList()">Создать
+  <input type="text" [(ngModel)]="name" placeholder="Name"/></span>
+<ng-container>
+  <div>
+    <div *ngFor="let c of taskLists">
+      <span (click)="getTasks(c)">
+        <input type="text" [(ngModel)]="c.name" />
+      </span>
+      <span style="color: red" (click)="deleteTaskList(c)"> Удалить</span>
+      <span style="color: green" (click)="updateTaskList(c)"> Изменить</span>
+    </div>
+  </div>
+</ng-container>
+
+<br/>
+Tasks:
+<span style="color: blue" (click)="createTask()">Создать
+  <input type="text" [(ngModel)]="task_listid" placeholder="list id"/>
+  <input type="text" [(ngModel)]="task_name" placeholder="name"/>
+  <input type="text" [(ngModel)]="task_status" placeholder="status"/></span>
+<div>
+  <div *ngFor="let p of tasks"><p> ID: {{p.id}}</p>
+    <p>Name: {{p.name}}</p>
+    <p>Created at: {{p.created_at}}</p>
+    <p>Status: {{p.status}}</p>
+    <p>Due on: {{p.due_on}}</p>
+    <span><input type="text" [(ngModel)]="p.name"/></span>
+    <span style="color: red" (click)="deleteTask(p)"> Удалить</span>
+    <span style="color: green" (click)="updateTask(p)"> Изменить
+      <input type="text" [(ngModel)]="p.task_list" placeholder="listid"/>
+      <input type="text" [(ngModel)]="p.name" placeholder="name"/>
+      <input type="text" [(ngModel)]="p.status" placeholder="status"/></span>
+     <br>
+  </div>
+</div>
