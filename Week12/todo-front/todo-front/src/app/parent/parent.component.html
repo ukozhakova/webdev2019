@@ -1,6 +1,6 @@
 TaskLists
-<span style="color: blue" (click)="createTaskList()">Создать
-  <input type="text" [(ngModel)]="name" placeholder="Name"/></span>
+<span style="color: blue" (click)="createTaskList()" >Создать
+  <input type="text" [(ngModel)]="name" placeholder="Name" (keyup.enter)="createTaskList()"/></span>
 <ng-container>
   <div>
     <div *ngFor="let c of taskLists">

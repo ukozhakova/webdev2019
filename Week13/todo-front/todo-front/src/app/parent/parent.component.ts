@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ProviderService } from '../shared/services/provider.service';
 import {ITaskList, ITask} from '../shared/models/models';
+import { loadInternal } from '@angular/core/src/render3/util';
+import { checkAndUpdateBinding } from '@angular/core/src/view/util';
 
 @Component({
   selector: 'app-parent',
@@ -10,24 +12,34 @@ import {ITaskList, ITask} from '../shared/models/models';
 export class ParentComponent implements OnInit {
   public taskLists: ITaskList[]=[];
   public tasks: ITask[]=[];
+  public taskList_current: ITaskList;
   public name: any='';
   public task_status: any='';
   public task_listid: any='';
   public task_name: any='';
+  public logged= false;
+  public login: any = '';
+  public password: any = '';
   constructor(private provider: ProviderService) { }
 
   ngOnInit() {
-    
-    this.provider.getTaskLists().then(res => {
-      this.taskLists =res;
-  });
-
-}
+    const token = localStorage.getItem('token');
+    if(token){
+      this.logged= true;
+    }
+    if(this.logged){
+      this.provider.getTaskLists().then(res=>{
+        this.taskLists= res;
+      });
+    }
+  }
 
   getTasks(taskList: ITaskList){
     this.provider.getTasks(taskList).then(res=>{
       this.tasks= res;
     });
+    this.taskList_current= taskList;
+
   }
 
   updateTaskList(taskList: ITaskList){
@@ -54,10 +66,11 @@ export class ParentComponent implements OnInit {
   }
   createTask(){
     if(this.task_name!==''){
-      this.provider.createTask(this.task_listid,this.task_name,this.task_status).then(res=>{
-        //this.task_name = '';
+      this.provider.createTask(this.task_name, this.task_status, this.taskList_current.id).then(res=>{
+        this.task_name = '';
+        this.task_status='';
         this.tasks.push(res);
-        console.log(this.task_name+ ' created')
+        console.log(this.task_name+ ' created'+ this.taskList_current.id);
       });
     }
   }
@@ -69,6 +82,28 @@ export class ParentComponent implements OnInit {
   deleteTask(task: ITask){
     this.provider.deleteTask(task).then(res=>{
       console.log(task.name+ ' deleted')
+      });
+    }
+    
+    logIn() {
+      if (this.login !== '' && this.password !== '') {
+        this.provider.logIn(this.login, this.password).then(res => {
+          localStorage.setItem('token', res.token);
+  
+          this.logged = true;
+  
+          this.provider.getTaskLists().then(r => {
+            this.taskLists = r;
+          });
+  
+        });
+      }
+    }
+  
+    logout() {
+      this.provider.logout().then(res => {
+        localStorage.clear();
+        this.logged = false;
       });
     }
   }

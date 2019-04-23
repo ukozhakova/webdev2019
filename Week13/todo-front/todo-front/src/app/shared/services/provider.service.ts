@@ -1,7 +1,8 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import {ITaskList, ITask} from '../models/models';
+import {ITaskList, ITask, IAuthResponse} from '../models/models';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {MainService} from './main.service';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -44,11 +45,22 @@ export class ProviderService extends MainService {
     return this.delet(`http://localhost:8000/task_lists/${task.task_list}/tasks/${task.id}/`, {
     });
   }
-  createTask(id: number, name: any, status: any): Promise<ITask>{
+  createTask(name: any, status: any, id: number): Promise<ITask>{
     return this.post(`http://localhost:8000/task_lists/${id}/tasks/`, {
       name: name,
       status: status,
-      task_list: id
     });
   }
+  logIn(login: any, password: any): Promise<IAuthResponse> {
+    return this.post('http://127.0.0.1:8000/login/', {
+      username: login,
+      password: password
+    });
+  }
+
+  logout(): Promise<any> {
+    return this.post('http://127.0.0.1:8000/logout/', {
+    });
+  }
+
 }
