@@ -66,11 +66,11 @@ export class ParentComponent implements OnInit {
   }
   createTask(){
     if(this.task_name!==''){
-      this.provider.createTask(this.task_name, this.task_status, this.taskList_current.id).then(res=>{
-        this.task_name = '';
-        this.task_status='';
+      this.provider.createTask(this.task_name, this.task_status, this.task_listid).then(res=>{
+        //this.task_name = '';
+       // this.task_status='';
         this.tasks.push(res);
-        console.log(this.task_name+ ' created'+ this.taskList_current.id);
+        console.log(this.task_name+ ' created');
       });
     }
   }

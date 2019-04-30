@@ -1,0 +1,13 @@
+<app-child [title]="'From parent Component 2'"
+           [array]="[1,2,3,4,5]"-->
+           (subTitle)="subTitle = $event"
+           (array2)="array2 = $event"></app-child>
+
+OUTPUT SUBTITLE:
+<div>{{subTitle}}</div>
+
+OUTPUT ARRAY2
+<div>
+  <div *ngFor="let i of array2">{{i}}</div>
+</div>
+

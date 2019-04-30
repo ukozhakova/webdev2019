@@ -49,6 +49,7 @@ export class ProviderService extends MainService {
     return this.post(`http://localhost:8000/task_lists/${id}/tasks/`, {
       name: name,
       status: status,
+      task_list: id
     });
   }
   logIn(login: any, password: any): Promise<IAuthResponse> {
