@@ -1,0 +1,62 @@
+<div>
+  <ng-container *ngIf="!logged">
+      <div> 
+        <div class="regist" >
+            Authentication 
+            <br><br>
+            <label style="font-family: 'Gruppo';" for="username">Username</label>
+            
+            <input type="text" id="username" [(ngModel)]="login"/>
+            
+            <label for="password">Password</label> 
+           
+            <input id="password" type="password" [(ngModel)]="password"/>
+            
+            <input type="submit" value="Log In" (click)="logIn()"/>
+        </div>
+      </div>
+    </ng-container>
+  <ng-container *ngIf="logged">
+    <br>
+    ADD NEW TASK LIST:
+    <div style=" display: inline;  white-space: nowrap;">
+      
+      <input type="text" [(ngModel)]="name" placeholder="Name"/>
+      <input type="text" [(ngModel)]="created_task_name" placeholder="task_name"/>
+      <input type="text" [(ngModel)]="created_task_status" placeholder="task_status"/>
+      <button  (click)="createTaskList()">Create</button> 
+    </div>
+    <br>
+    TaskLists
+    <br>
+    <br>
+    <div style="display: inline;">
+      <div> 
+        <input type="text" [(ngModel)]="search_name" placeholder="name"><button (click)="filter1()">Filter</button>
+        <input type="text" [(ngModel)]="search_list" placeholder="name"><button (click)="searchList()">Search</button>
+       
+        <div  *ngFor="let t of taskLists">
+          <span (click)="getTasks(t)">
+            <input type="text" [(ngModel)]="t.name"/>
+        </span>
+            <span  style="color: red" (click)="deleteTaskList(t)">Delete  </span>
+            <span  style="color: green" (click)="updateTaskList(t)">Update </span>
+          
+            </div>
+            <br>
+            <span style="color: blue" (click)="createTask()">Create Task
+                <input type="text" [(ngModel)]="task_name" placeholder="name"/>
+                <input type="text" [(ngModel)]="task_status" placeholder="status"/>
+                <input type="text" [(ngModel)]="task_listid" placeholder="task_listid"/>
+
+                </span>
+            </div>
+    </div> <br>
+    Tasks:
+    <div class="tasks">
+        <div *ngFor="let t of tasks"><li>{{t.name}}<p>{{t.status}}</p><p>Created at: {{t.created_at}}</p><p>Due on: {{t.due_on}}</p></li></div>
+      <br>
+        <button (click)="logout()">Log Out</button>   
+      </div>
+  </ng-container>
+  </div>
